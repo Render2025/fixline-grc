@@ -1,0 +1,32 @@
+Jordan Lee
+Auburn, WA | jordan.lee.fictional@example.com | (253) 555-0142
+
+OBJECTIVE
+Green River College student seeking entry-level IT support or help-desk roles while completing an Associate in Applied Science.
+
+EDUCATION
+Green River College — Associate in Applied Science, Network Administration (In progress, expected June 2027)
+GPA: 3.6
+Relevant coursework: Intro to Networking, Windows Server Fundamentals, Cybersecurity Essentials, Python for IT
+
+CERTIFICATIONS
+CompTIA A+ (in progress — Core 1 scheduled)
+Google IT Support Certificate (completed 2025)
+
+EXPERIENCE
+IT Student Assistant — Green River College Library
+Sep 2025 – Present | 12 hrs/week
+- Assisted students with printing, Wi-Fi, and campus account lockouts
+- Imaged 15+ lab PCs each quarter using campus standard image
+- Documented recurring issues in a shared troubleshooting log
+
+Barista — Cascade Coffee (fictional)
+Jun 2024 – Aug 2025
+- Opened store twice weekly; handled cash and inventory counts
+- Trained two new hires on POS procedures
+
+PROJECTS
+Home Lab: Built a small Hyper-V lab with Windows Server and a pfSense VM for coursework labs.
+
+SKILLS
+Windows 10/11, basic Active Directory concepts, Python basics, customer service, ticketing notes
