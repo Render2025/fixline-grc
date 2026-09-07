@@ -1,0 +1,50 @@
+name = "fixline-grc"
+main = "src/index.ts"
+compatibility_date = "2025-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+workers_dev = true
+
+[vars]
+PUBLIC_BASE_URL = "https://fixline-grc.<your-subdomain>.workers.dev"
+MAX_REVISE_ATTEMPTS = "3"
+PILOT_MODE = "human"
+XAI_MODEL_GENERATE = "grok-4.6"
+XAI_MODEL_QC = "grok-4.6"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fixline-grc"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "RESUME_BUCKET"
+bucket_name = "fixline-grc-resumes"
+
+[[queues.producers]]
+binding = "GENERATE_QUEUE"
+queue = "fixline-generate"
+
+[[queues.consumers]]
+queue = "fixline-generate"
+max_batch_size = 1
+max_retries = 3
+# dead_letter_queue = "fixline-generate-dlq"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Secrets (set via `wrangler secret put`):
+#   XAI_API_KEY
+#   RATE_LIMIT_SALT
+#   REVIEW_PASSWORD
+
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
