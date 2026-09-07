@@ -1,0 +1,29 @@
+{
+  "name": "fixline-grc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FixLine Green River College pilot — Cloudflare Workers backend",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --experimental-strip-types --loader ./tests/ts-loader.mjs --test tests/*.test.ts",
+    "test:baseline": "node --experimental-strip-types --loader ./tests/ts-loader.mjs --test tests/baseline.test.ts",
+    "cf-typegen": "wrangler types",
+    "db:migrate:local": "wrangler d1 migrations apply fixline-grc --local",
+    "db:migrate:remote": "wrangler d1 migrations apply fixline-grc --remote"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "unpdf": "^0.12.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250807.0",
+    "typescript": "^5.9.2",
+    "wrangler": "^3.114.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

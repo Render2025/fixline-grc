@@ -1,0 +1,15 @@
+node_modules/
+.wrangler/
+.dev.vars
+dist/
+*.log
+__pycache__/
+.DS_Store
+# Never commit résumés or extracted text dumps
+uploads/
+tmp/
+*.pdf
+!public/**/*.pdf
+.env
+.env.*
+worker-configuration.d.ts
